@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ArduBlueDroid</string>
+    <string name="bluetooth_incompatible">Device does not support bluetooth</string>
+    <string name="bluetooth_activated">Bluetooth was active</string>
 </resources>

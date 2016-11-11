@@ -14,4 +14,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <Button
+        android:text="ON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btOn" />
+
+    <Button
+        android:text="OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btOff"
+        android:elevation="0dp"
+        android:layout_below="@+id/btOn"
+        android:layout_alignLeft="@+id/btOn"
+        android:layout_alignStart="@+id/btOn" />
 </RelativeLayout>
