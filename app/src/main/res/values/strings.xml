@@ -2,4 +2,6 @@
     <string name="app_name">ArduBlueDroid</string>
     <string name="bluetooth_incompatible">Device does not support bluetooth</string>
     <string name="bluetooth_activated">Bluetooth was active</string>
+    <string name="bluetooth_search">Search devices</string>
+    <string name="devices_not_found">Make sure devices are paired</string>
 </resources>

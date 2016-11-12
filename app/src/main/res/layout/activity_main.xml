@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:adnroid="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,18 +11,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ccano.android.ardubluedroid.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btSearchDevices"
+        android:text="@string/bluetooth_search" />
 
     <Button
         android:text="ON"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/btOn" />
+        android:id="@+id/btOn"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="OFF"
@@ -32,4 +36,5 @@
         android:layout_below="@+id/btOn"
         android:layout_alignLeft="@+id/btOn"
         android:layout_alignStart="@+id/btOn" />
+
 </RelativeLayout>
