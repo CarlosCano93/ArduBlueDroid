@@ -1,3 +1,13 @@
+/**
+* Prepare Arduino uno with next connections:
+* HC-06/HC-05 -> Arduino Uno
+*  +5V/VCC    ->    5V
+*    GND      ->    GND
+*    TX       ->  RX(pwm 0)
+*
+* Led in digital pwm 5 and GND
+*/
+
 char command;
 String string;
 boolean ledon = false;
