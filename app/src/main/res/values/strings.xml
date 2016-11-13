@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">ArduBlueDroid</string>
+
     <string name="bluetooth_incompatible">Device does not support bluetooth</string>
     <string name="bluetooth_activated">Bluetooth was active</string>
     <string name="bluetooth_search">Search devices</string>
+
     <string name="devices_not_found">Make sure devices are paired</string>
     <string name="connection_failed">Failed to connect</string>
     <string name="connection_succesfull">Connected</string>
-    <string name="error">Error</string>
     <string name="connection_connecting">Connecting... Please wait</string>
+
+    <string name="error">Error</string>
+    <string name="tutorial">Put the same key name that you use in your Arduino code:</string>
+
+    <string name="keycode_et_1">D1</string>
+    <string name="keycode_et_2">D2</string>
 </resources>

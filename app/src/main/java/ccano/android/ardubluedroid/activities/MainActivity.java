@@ -7,16 +7,26 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.UUID;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ccano.android.ardubluedroid.R;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Bind(R.id.etDigital1)
+    EditText etDigitalOne;
+
+    @Bind(R.id.etDigital2)
+    EditText etDigitalTwo;
 
     private String address = null;
     private boolean isBtConnected = false;
@@ -26,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
     // SPP UUID service - this should work for most devices
     private static final UUID DEFAULT_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     // Arduino receive this and set HIGH led
-    private static final String LED_ON = "L1";
-    private static final String LED_OFF = "L2";
+    private static final String ON = "1";
+    private static final String OFF = "0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,22 +50,38 @@ public class MainActivity extends AppCompatActivity {
         address = i.getStringExtra(BluetoothDevicesActivity.EXTRA_DEVICE_ADDRESS);
 
         new BluetoothConnection().execute();
+
+        // control click on switch 1
+        Switch swD1 = (Switch) findViewById(R.id.swDigital1);
+        swD1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    write(etDigitalOne.getText() + ON);
+                } else {
+                    write(etDigitalOne.getText() + OFF);
+
+                }
+            }
+        });
+
+        // control click on switch 2
+        Switch swD2 = (Switch) findViewById(R.id.swDigital2);
+        swD2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    write(etDigitalTwo.getText() + ON);
+                } else {
+                    write(etDigitalTwo.getText() + OFF);
+
+                }
+            }
+        });
     }
 
     // go back to device list activity
     @OnClick(R.id.btSearchDevices)
-    public void handleButtonSearchDevice(){
+    public void handleButtonSearchDevice() {
         finish();
-    }
-
-    @OnClick(R.id.btOn)
-    void handleButtonOn(){
-        write(LED_ON);
-    }
-
-    @OnClick(R.id.btOff)
-    void handleButtonOff(){
-        write(LED_OFF);
     }
 
     /**

@@ -19,22 +19,58 @@
         android:id="@+id/btSearchDevices"
         android:text="@string/bluetooth_search" />
 
-    <Button
-        android:text="ON"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btOn"
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btSearchDevices">
 
-    <Button
-        android:text="OFF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btOff"
-        android:elevation="0dp"
-        android:layout_below="@+id/btOn"
-        android:layout_alignLeft="@+id/btOn"
-        android:layout_alignStart="@+id/btOn" />
+        <TextView
+            android:text="@string/tutorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/keycode_et_1"
+                android:ems="10"
+                android:id="@+id/etDigital1" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/swDigital1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/keycode_et_2"
+                android:ems="10"
+                android:id="@+id/etDigital2" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/swDigital2" />
+        </TableRow>
+
+    </TableLayout>
+
 
 </RelativeLayout>
