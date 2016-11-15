@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ccano.android.ardubluedroid.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @Bind(R.id.etDigital1)
     EditText etDigitalOne;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         // get MAC address from BluetoothDevicesActivity
         Intent i = getIntent();
-        address = i.getStringExtra(BluetoothDevicesActivity.EXTRA_DEVICE_ADDRESS);
+        //address = i.getStringExtra(BluetoothDevicesActivity.EXTRA_DEVICE_ADDRESS);
 
         new BluetoothConnection().execute();
 
