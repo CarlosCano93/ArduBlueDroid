@@ -30,4 +30,6 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support:design:25.0.1'
     compile 'com.android.support:recyclerview-v7:25.0.1'
+
+    compile 'com.github.pavlospt:roundedletterview:1.2'
 }

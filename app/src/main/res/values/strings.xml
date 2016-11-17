@@ -22,5 +22,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_devices_list">DevicesListActivity</string>
     <string name="title_activity_device_list">DeviceListActivity</string>
+    <string name="default_item_list">Scan new devices</string>
 
 </resources>
